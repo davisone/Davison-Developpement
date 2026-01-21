@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { cn } from '@/lib/utils'
 
 interface LogoProps {
@@ -7,24 +8,27 @@ interface LogoProps {
   size?: 'sm' | 'md' | 'lg' | 'xl' | 'intro'
 }
 
-const sizeClasses = {
-  sm: 'w-8 h-8 text-sm',
-  md: 'w-10 h-10 text-base',
-  lg: 'w-12 h-12 text-lg',
-  xl: 'w-16 h-16 text-xl',
-  intro: 'w-32 h-32 text-4xl md:w-40 md:h-40 md:text-5xl',
+const sizeConfig = {
+  sm: { width: 40, height: 40, className: 'w-10 h-10' },
+  md: { width: 48, height: 48, className: 'w-12 h-12' },
+  lg: { width: 56, height: 56, className: 'w-14 h-14' },
+  xl: { width: 72, height: 72, className: 'w-18 h-18' },
+  intro: { width: 160, height: 160, className: 'w-32 h-32 md:w-40 md:h-40' },
 }
 
 export function Logo({ className, size = 'md' }: LogoProps) {
+  const config = sizeConfig[size]
+
   return (
-    <div
-      className={cn(
-        'flex items-center justify-center rounded-lg bg-accent font-bold text-primary',
-        sizeClasses[size],
-        className
-      )}
-    >
-      <span className="tracking-tight">DD</span>
+    <div className={cn('relative', config.className, className)}>
+      <Image
+        src="/images/logo.png"
+        alt="Davison Développement"
+        width={config.width}
+        height={config.height}
+        className="w-full h-full object-contain"
+        priority
+      />
     </div>
   )
 }

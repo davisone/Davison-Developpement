@@ -46,7 +46,7 @@ export function Header() {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <Logo size="sm" className="transition-transform group-hover:scale-105" />
+            <Logo size="lg" className="transition-transform group-hover:scale-105" />
             <span className="hidden sm:block font-semibold text-white">
               Davison Développement
             </span>

@@ -85,7 +85,7 @@ const pricingCategories = [
     plans: [
       {
         name: 'Application Web',
-        price: '3 990',
+        price: '2 990',
         popular: false,
         icon: Code,
         description: 'Outil métier ou plateforme web',

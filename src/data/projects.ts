@@ -2,48 +2,104 @@ export interface Project {
   id: string
   title: string
   description: string
+  longDescription?: string
   image: string
   tags: string[]
+  features?: string[]
   category: 'site' | 'app-web' | 'app-mobile' | 'refonte'
   link?: string
   year: number
+  client?: string
+  location?: string
+  isPersonalProject?: boolean
+  isInternalProject?: boolean
 }
 
 export const projects: Project[] = [
-  // Exemples de projets - à remplacer par tes vrais projets
   {
-    id: 'projet-exemple-1',
-    title: 'Site E-commerce Mode',
-    description: 'Boutique en ligne complète avec système de paiement, gestion des stocks et interface d\'administration.',
-    image: '/images/projects/placeholder.jpg',
-    tags: ['Next.js', 'Stripe', 'Tailwind CSS', 'PostgreSQL'],
+    id: 'haut-en-couleur',
+    title: 'Haut en Couleur',
+    description: 'Site vitrine complet et multilingue pour une entreprise de peinture en bâtiment. Design moderne avec mode sombre, galerie avant/après interactive et optimisation SEO locale.',
+    longDescription: 'Création complète de la présence digitale pour cette entreprise de peinture basée près de Rennes : site web multilingue (FR/EN), fiche Google Business Profile, réseaux sociaux et configuration Analytics.',
+    image: '/images/projects/haut-en-couleur.jpg',
+    tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'SEO', 'Multilingue'],
+    features: [
+      'Mode dark/light avec persistance',
+      'Multilingue FR/EN avec URLs localisées',
+      'Slider avant/après interactif',
+      'Galerie lightbox avec filtres',
+      'Formulaire sécurisé (hCaptcha, rate limiting)',
+      'Carrousel d\'avis Google',
+      'Carte interactive zone d\'intervention',
+      '10+ pages (mentions légales, RGPD, 404...)',
+      'Images optimisées WebP/AVIF',
+      'Schema.org LocalBusiness',
+      'Accessibilité WCAG 2.1',
+      'Fiche Google Business créée',
+      'Google Analytics 4 configuré',
+    ],
     category: 'site',
-    year: 2024,
+    link: 'https://www.haut-en-couleur.fr',
+    year: 2025,
+    client: 'Haut en Couleur',
   },
   {
-    id: 'projet-exemple-2',
-    title: 'Application de Gestion',
-    description: 'Tableau de bord interne pour la gestion des ressources humaines et le suivi des projets.',
-    image: '/images/projects/placeholder.jpg',
-    tags: ['React', 'Node.js', 'MongoDB', 'Docker'],
-    category: 'app-web',
-    year: 2024,
-  },
-  {
-    id: 'projet-exemple-3',
-    title: 'Application Mobile Santé',
-    description: 'Application de suivi santé avec synchronisation des données et notifications personnalisées.',
-    image: '/images/projects/placeholder.jpg',
-    tags: ['React Native', 'Firebase', 'TypeScript'],
+    id: 'carnet-sante-animaux',
+    title: 'Carnet de Santé Animaux',
+    description: 'Application mobile multi-plateforme pour gérer la santé et l\'historique médical des animaux. Synchronisation cloud, notifications intelligentes et export PDF.',
+    longDescription: 'Carnet de santé numérique complet pour animaux de compagnie et d\'élevage : suivi vaccins, traitements, consultations, généalogie et reproductions. Disponible sur iOS, Android, Web et Desktop.',
+    image: '/images/projects/carnet-sante-animaux.jpg',
+    tags: ['Flutter', 'Firebase', 'Dart', 'Multi-plateforme'],
+    features: [
+      'Fiches animaux complètes (photo, identification, généalogie)',
+      'Suivi vaccins avec rappels automatiques',
+      'Gestion traitements et dosages',
+      'Historique consultations vétérinaires',
+      'Suivi maladies aiguës/chroniques',
+      'Graphiques évolution du poids',
+      'Arbre généalogique interactif',
+      'Suivi reproductions et naissances',
+      'Export PDF des fiches complètes',
+      'Notifications et rappels automatiques',
+      'Recherche et filtres avancés',
+      'Synchronisation cloud Firebase',
+      'Multi-plateforme (iOS, Android, Web, Desktop)',
+    ],
     category: 'app-mobile',
-    year: 2024,
+    year: 2026,
+  },
+  {
+    id: 'resumeforge',
+    title: 'ResumeForge',
+    description: 'Plateforme SaaS de création de CVs intelligents avec IA. Génération de suggestions, scoring ATS, multi-templates et export PDF.',
+    longDescription: 'Application web complète permettant de créer, éditer et exporter des CVs professionnels. Intégration IA pour améliorer le contenu et évaluer la compatibilité ATS. Authentification avancée avec 2FA.',
+    image: '/images/projects/resumeforge.jpg',
+    tags: ['Next.js 15', 'PostgreSQL', 'Prisma', 'Claude API', 'TypeScript'],
+    features: [
+      'Authentification OAuth (Google, GitHub) + 2FA',
+      '5 templates professionnels (Modern, Classic, ATS...)',
+      'Suggestions IA pour améliorer le contenu',
+      'Score ATS avec recommandations',
+      'Profil maître réutilisable',
+      'Création illimitée de versions',
+      'Export PDF haute qualité',
+      'Partage public avec lien unique',
+      'Validation Zod (client + serveur)',
+      'Rate limiting sur endpoints IA',
+      'Transactions Prisma atomiques',
+      'Design responsive',
+    ],
+    category: 'app-web',
+    year: 2026,
+    client: 'Davison Développement',
+    isInternalProject: true,
   },
 ]
 
 export const categories = [
   { id: 'all', label: 'Tous' },
   { id: 'site', label: 'Sites web' },
-  { id: 'app-web', label: 'Applications web' },
   { id: 'app-mobile', label: 'Applications mobiles' },
+  { id: 'app-web', label: 'Applications web' },
   { id: 'refonte', label: 'Refontes' },
 ]

@@ -86,6 +86,7 @@ const pricingCategories = [
       {
         name: 'Application Web',
         price: '3 990',
+        popular: false,
         icon: Code,
         description: 'Outil métier ou plateforme web',
         features: [
@@ -101,6 +102,7 @@ const pricingCategories = [
       {
         name: 'Application Mobile',
         price: '4 990',
+        popular: false,
         icon: Smartphone,
         description: 'Application iOS et Android',
         features: [

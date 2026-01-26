@@ -175,7 +175,7 @@ export function IntroAnimation({ onComplete }: IntroAnimationProps) {
               transition={{ duration: 0.8, repeat: phase === 'pulse' ? 1 : 0 }}
             >
               <Image
-                src="/images/logo.png"
+                src="/images/logo-final.png"
                 alt="Davison Développement"
                 width={350}
                 height={350}

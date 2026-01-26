@@ -22,7 +22,7 @@ const navigation = {
   social: [
     { name: 'LinkedIn', href: 'https://linkedin.com/in/', icon: Linkedin },
     { name: 'GitHub', href: 'https://github.com/', icon: Github },
-    { name: 'Email', href: 'mailto:contact@davison-developpement.fr', icon: Mail },
+    { name: 'Email', href: 'mailto:contact@dvs-web.fr', icon: Mail },
   ],
 }
 
@@ -37,7 +37,7 @@ export function Footer() {
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-3 mb-4">
               <Logo size="sm" />
-              <span className="font-semibold text-white">Davison Développement</span>
+              <span className="font-semibold text-white">DVS Web</span>
             </Link>
             <p className="text-neutral-400 text-sm leading-relaxed mb-6">
               Développeur web freelance basé près de Rennes.
@@ -99,10 +99,15 @@ export function Footer() {
             <ul className="space-y-3 text-sm text-neutral-400">
               <li>
                 <a
-                  href="mailto:contact@davison-developpement.fr"
+                  href="mailto:contact@dvs-web.fr"
                   className="hover:text-white transition-colors"
                 >
-                  contact@davison-developpement.fr
+                  contact@dvs-web.fr
+                </a>
+              </li>
+              <li>
+                <a href="tel:+33651019506" className="hover:text-white transition-colors">
+                  06 51 01 95 06
                 </a>
               </li>
               <li>Rennes et alentours, France</li>
@@ -114,7 +119,7 @@ export function Footer() {
         <div className="mt-12 pt-8 border-t border-neutral-800">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-neutral-500 text-sm">
-              © {currentYear} Davison Développement. Tous droits réservés.
+              © {currentYear} DVS Web. Tous droits réservés.
             </p>
             <div className="flex gap-6 text-sm">
               <Link href="/mentions-legales" className="text-neutral-500 hover:text-white transition-colors">

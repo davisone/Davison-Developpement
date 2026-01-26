@@ -81,7 +81,7 @@ export function AboutPage() {
                 </div>
                 <p className="text-neutral-300 leading-relaxed">
                   Actuellement en Bachelor Développement Web (Bac+3), j&apos;ai lancé
-                  Davison Développement pour mettre mes compétences au service de
+                  DVS Web pour mettre mes compétences au service de
                   projets concrets. Mon objectif : créer des sites et applications
                   qui apportent une vraie valeur à mes clients, tout en continuant
                   à progresser sur des projets stimulants.

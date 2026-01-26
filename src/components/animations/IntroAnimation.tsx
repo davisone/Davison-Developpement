@@ -176,7 +176,7 @@ export function IntroAnimation({ onComplete }: IntroAnimationProps) {
             >
               <Image
                 src="/images/logo-final.png"
-                alt="Davison Développement"
+                alt="DVS Web"
                 width={350}
                 height={350}
                 className="w-[280px] h-[280px] md:w-[350px] md:h-[350px] object-contain"
@@ -203,7 +203,7 @@ export function IntroAnimation({ onComplete }: IntroAnimationProps) {
               animate={phase === 'pulse' ? { opacity: [1, 0.5, 1] } : {}}
               transition={{ duration: 0.8, repeat: 1 }}
             >
-              Davison Développement
+              DVS Web
             </motion.p>
           </motion.div>
         </motion.div>

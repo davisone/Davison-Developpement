@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Conditions Générales de Vente',
-  description: 'Conditions générales de vente des prestations de développement web - Davison Développement.',
+  description: 'Conditions générales de vente des prestations de développement web - DVS Web.',
 }
 
 export default function CGVPage() {
@@ -22,11 +22,12 @@ export default function CGVPage() {
               <div className="card">
                 <ul className="space-y-2 text-neutral-300">
                   <li><strong className="text-white">Nom :</strong> Evan Davison</li>
-                  <li><strong className="text-white">Nom commercial :</strong> Davison Développement</li>
+                  <li><strong className="text-white">Nom commercial :</strong> DVS Web</li>
                   <li><strong className="text-white">Statut :</strong> Micro-entrepreneur</li>
                   <li><strong className="text-white">SIRET :</strong> 100 077 247 00011</li>
                   <li><strong className="text-white">Adresse :</strong> 22 Le Domaine, 35310 Mordelles, France</li>
-                  <li><strong className="text-white">Email :</strong> contact@davison-developpement.fr</li>
+                  <li><strong className="text-white">Email :</strong> contact@dvs-web.fr</li>
+                  <li><strong className="text-white">Téléphone :</strong> 06 51 01 95 06</li>
                 </ul>
                 <p className="text-neutral-400 text-sm mt-4">
                   TVA non applicable, article 293 B du Code Général des Impôts.
@@ -38,7 +39,7 @@ export default function CGVPage() {
               <h2 className="heading-3 mb-4">Article 2 - Champ d&apos;application</h2>
               <p className="text-neutral-300">
                 Les présentes Conditions Générales de Vente (CGV) s&apos;appliquent à toutes les prestations
-                de services conclues entre Davison Développement et ses clients professionnels ou particuliers.
+                de services conclues entre DVS Web et ses clients professionnels ou particuliers.
               </p>
               <p className="text-neutral-300 mt-4">
                 Toute commande implique l&apos;acceptation sans réserve des présentes CGV.
@@ -47,7 +48,7 @@ export default function CGVPage() {
 
             <section>
               <h2 className="heading-3 mb-4">Article 3 - Prestations proposées</h2>
-              <p className="text-neutral-300">Davison Développement propose les services suivants :</p>
+              <p className="text-neutral-300">DVS Web propose les services suivants :</p>
               <ul className="list-disc list-inside text-neutral-300 mt-4 space-y-2">
                 <li>Création de sites internet (vitrines, e-commerce, sur-mesure)</li>
                 <li>Refonte de sites existants</li>
@@ -145,7 +146,7 @@ export default function CGVPage() {
                 est effectif après paiement intégral de la prestation.
               </p>
               <p className="text-neutral-300 mt-4">
-                Davison Développement se réserve le droit de mentionner la réalisation dans
+                DVS Web se réserve le droit de mentionner la réalisation dans
                 son portfolio et ses références, sauf accord contraire du client.
               </p>
             </section>
@@ -153,11 +154,11 @@ export default function CGVPage() {
             <section>
               <h2 className="heading-3 mb-4">Article 10 - Responsabilité</h2>
               <p className="text-neutral-300">
-                Davison Développement s&apos;engage à mettre en œuvre tous les moyens nécessaires
+                DVS Web s&apos;engage à mettre en œuvre tous les moyens nécessaires
                 à la bonne exécution de ses prestations (obligation de moyens).
               </p>
               <p className="text-neutral-300 mt-4">
-                La responsabilité de Davison Développement ne saurait être engagée en cas de :
+                La responsabilité de DVS Web ne saurait être engagée en cas de :
               </p>
               <ul className="list-disc list-inside text-neutral-300 mt-2 space-y-1">
                 <li>Mauvaise utilisation du site ou de l&apos;application par le client</li>
@@ -170,7 +171,7 @@ export default function CGVPage() {
             <section>
               <h2 className="heading-3 mb-4">Article 11 - Confidentialité</h2>
               <p className="text-neutral-300">
-                Davison Développement s&apos;engage à traiter de manière confidentielle toutes
+                DVS Web s&apos;engage à traiter de manière confidentielle toutes
                 les informations communiquées par le client dans le cadre de la prestation.
               </p>
             </section>

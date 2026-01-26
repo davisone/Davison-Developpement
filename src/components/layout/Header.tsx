@@ -47,8 +47,9 @@ export function Header() {
       <nav className="container-custom">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <Logo size="xl" className="transition-transform group-hover:scale-105" />
+          <Link href="/" className="flex items-center gap-2 group">
+            <Logo size="xl" className="transition-transform group-hover:scale-105 !w-16 !h-16 md:!w-20 md:!h-20" />
+            <span className="font-semibold text-white text-lg">Web</span>
           </Link>
 
           {/* Desktop Navigation */}

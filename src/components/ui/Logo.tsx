@@ -23,7 +23,7 @@ export function Logo({ className, size = 'md' }: LogoProps) {
     <div className={cn('relative', config.className, className)}>
       <Image
         src="/images/logo-final.png"
-        alt="Davison Développement"
+        alt="DVS Web"
         width={config.width}
         height={config.height}
         className="w-full h-full object-contain"

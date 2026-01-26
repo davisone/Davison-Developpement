@@ -10,8 +10,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Développeur Web Freelance Rennes & Ille-et-Vilaine | Davison Développement',
-    template: '%s | Davison Développement',
+    default: 'Développeur Web Freelance Rennes & Ille-et-Vilaine | DVS Web',
+    template: '%s | DVS Web',
   },
   description:
     'Développeur web freelance en Ille-et-Vilaine (35). Création de sites internet, applications web et mobiles sur-mesure à Rennes, Mordelles, Bruz et alentours. Devis gratuit.',
@@ -30,19 +30,19 @@ export const metadata: Metadata = {
     'SEO Rennes',
   ],
   authors: [{ name: 'Evan Davison' }],
-  creator: 'Davison Développement',
+  creator: 'DVS Web',
   openGraph: {
     type: 'website',
     locale: 'fr_FR',
-    url: 'https://davison-developpement.fr',
-    siteName: 'Davison Développement',
-    title: 'Développeur Web Freelance Rennes & Ille-et-Vilaine | Davison Développement',
+    url: 'https://dvs-web.fr',
+    siteName: 'DVS Web',
+    title: 'Développeur Web Freelance Rennes & Ille-et-Vilaine | DVS Web',
     description:
       'Développeur web freelance en Ille-et-Vilaine. Création de sites internet et applications sur-mesure à Rennes et alentours.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Développeur Web Freelance Rennes | Davison Développement',
+    title: 'Développeur Web Freelance Rennes | DVS Web',
     description:
       'Développeur web freelance en Ille-et-Vilaine. Création de sites internet et applications sur-mesure à Rennes et alentours.',
   },
@@ -55,11 +55,12 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  '@id': 'https://davison-developpement.fr',
-  name: 'Davison Développement',
+  '@id': 'https://dvs-web.fr',
+  name: 'DVS Web',
   description: 'Développeur web freelance spécialisé dans la création de sites internet et applications sur-mesure en Ille-et-Vilaine.',
-  url: 'https://davison-developpement.fr',
-  email: 'contact@davison-developpement.fr',
+  url: 'https://dvs-web.fr',
+  email: 'contact@dvs-web.fr',
+  telephone: '+33651019506',
   founder: {
     '@type': 'Person',
     name: 'Evan Davison',

@@ -102,7 +102,7 @@ const jsonLd = {
   name: 'Développeur Web Freelance Rennes',
   provider: {
     '@type': 'LocalBusiness',
-    name: 'Davison Développement',
+    name: 'DVS Web',
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Mordelles',
@@ -353,8 +353,8 @@ export default function DeveloppeurWebRennesPage() {
                   Demander un devis gratuit
                   <ArrowRight size={20} />
                 </Button>
-                <Button href="mailto:contact@davison-developpement.fr" variant="ghost" size="lg">
-                  contact@davison-developpement.fr
+                <Button href="mailto:contact@dvs-web.fr" variant="ghost" size="lg">
+                  contact@dvs-web.fr
                 </Button>
               </div>
             </div>

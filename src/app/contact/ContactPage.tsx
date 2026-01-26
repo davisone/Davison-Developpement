@@ -3,15 +3,21 @@
 import { useState } from 'react'
 import { ScrollReveal } from '@/components/animations/ScrollReveal'
 import { Button } from '@/components/ui/Button'
-import { Mail, MapPin, Linkedin, Github, Send, CheckCircle } from 'lucide-react'
+import { Mail, MapPin, Linkedin, Github, Send, CheckCircle, Phone } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 const contactInfo = [
   {
     icon: Mail,
     label: 'Email',
-    value: 'contact@davison-developpement.fr',
-    href: 'mailto:contact@davison-developpement.fr',
+    value: 'contact@dvs-web.fr',
+    href: 'mailto:contact@dvs-web.fr',
+  },
+  {
+    icon: Phone,
+    label: 'Téléphone',
+    value: '06 51 01 95 06',
+    href: 'tel:+33651019506',
   },
   {
     icon: MapPin,
@@ -21,7 +27,7 @@ const contactInfo = [
   {
     icon: Linkedin,
     label: 'LinkedIn',
-    value: 'Davison Développement',
+    value: 'DVS Web',
     href: 'https://linkedin.com/in/',
   },
   {
@@ -41,17 +47,31 @@ export function ContactPage() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [error, setError] = useState('')
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setError('')
 
-    // Simuler l'envoi - à remplacer par une vraie API
-    await new Promise((resolve) => setTimeout(resolve, 1000))
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formState),
+      })
 
-    setIsSubmitting(false)
-    setIsSubmitted(true)
-    setFormState({ name: '', email: '', subject: '', message: '' })
+      if (!response.ok) {
+        throw new Error('Erreur lors de l\'envoi')
+      }
+
+      setIsSubmitted(true)
+      setFormState({ name: '', email: '', subject: '', message: '' })
+    } catch {
+      setError('Une erreur est survenue. Veuillez réessayer ou me contacter directement par email.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (
@@ -197,6 +217,12 @@ export function ContactPage() {
                         placeholder="Décrivez votre projet, vos besoins, vos questions..."
                       />
                     </div>
+
+                    {error && (
+                      <div className="p-4 bg-red-500/10 border border-red-500/20 rounded-lg text-red-400 text-sm">
+                        {error}
+                      </div>
+                    )}
 
                     <Button
                       type="submit"

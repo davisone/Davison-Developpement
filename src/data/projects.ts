@@ -91,7 +91,7 @@ export const projects: Project[] = [
     ],
     category: 'app-web',
     year: 2026,
-    client: 'Davison Développement',
+    client: 'DVS Web',
     isInternalProject: true,
   },
 ]

@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Mentions légales',
-  description: 'Mentions légales du site Davison Développement - Développeur web freelance à Rennes.',
+  description: 'Mentions légales du site DVS Web - Développeur web freelance à Rennes.',
 }
 
 export default function MentionsLegalesPage() {
@@ -22,7 +22,8 @@ export default function MentionsLegalesPage() {
                   <li><strong className="text-white">Statut :</strong> Micro-entrepreneur</li>
                   <li><strong className="text-white">SIRET :</strong> 100 077 247 00011</li>
                   <li><strong className="text-white">Adresse :</strong> 22 Le Domaine, 35310 Mordelles, France</li>
-                  <li><strong className="text-white">Email :</strong> contact@davison-developpement.fr</li>
+                  <li><strong className="text-white">Email :</strong> contact@dvs-web.fr</li>
+                  <li><strong className="text-white">Téléphone :</strong> 06 51 01 95 06</li>
                 </ul>
               </div>
             </section>
@@ -49,13 +50,13 @@ export default function MentionsLegalesPage() {
               <h2 className="heading-3 mb-4">Propriété intellectuelle</h2>
               <p className="text-neutral-300">
                 L&apos;ensemble du contenu de ce site (textes, images, graphismes, logo, icônes, etc.)
-                est la propriété exclusive de Davison Développement, à l&apos;exception des marques,
+                est la propriété exclusive de DVS Web, à l&apos;exception des marques,
                 logos ou contenus appartenant à d&apos;autres sociétés partenaires ou auteurs.
               </p>
               <p className="text-neutral-300 mt-4">
                 Toute reproduction, distribution, modification, adaptation, retransmission ou publication,
                 même partielle, de ces différents éléments est strictement interdite sans l&apos;accord
-                exprès par écrit de Davison Développement.
+                exprès par écrit de DVS Web.
               </p>
             </section>
 
@@ -71,7 +72,7 @@ export default function MentionsLegalesPage() {
                 répondre à vos demandes et ne sont jamais transmises à des tiers.
               </p>
               <p className="text-neutral-300 mt-4">
-                Pour exercer vos droits, contactez-nous à : <a href="mailto:contact@davison-developpement.fr" className="text-accent hover:underline">contact@davison-developpement.fr</a>
+                Pour exercer vos droits, contactez-nous à : <a href="mailto:contact@dvs-web.fr" className="text-accent hover:underline">contact@dvs-web.fr</a>
               </p>
             </section>
 
@@ -86,8 +87,8 @@ export default function MentionsLegalesPage() {
             <section>
               <h2 className="heading-3 mb-4">Limitation de responsabilité</h2>
               <p className="text-neutral-300">
-                Davison Développement s&apos;efforce d&apos;assurer au mieux l&apos;exactitude et la mise
-                à jour des informations diffusées sur ce site. Toutefois, Davison Développement ne peut
+                DVS Web s&apos;efforce d&apos;assurer au mieux l&apos;exactitude et la mise
+                à jour des informations diffusées sur ce site. Toutefois, DVS Web ne peut
                 garantir l&apos;exactitude, la précision ou l&apos;exhaustivité des informations mises à
                 disposition sur ce site.
               </p>

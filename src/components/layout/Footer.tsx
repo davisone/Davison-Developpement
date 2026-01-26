@@ -1,7 +1,5 @@
 import Link from 'next/link'
 import { Logo } from '@/components/ui/Logo'
-import { Linkedin, Github, Mail } from 'lucide-react'
-
 const navigation = {
   main: [
     { name: 'Accueil', href: '/' },
@@ -19,11 +17,6 @@ const navigation = {
     { name: 'Applications mobiles', href: '/services#application-mobile' },
     { name: 'Développeur web Rennes', href: '/developpeur-web-rennes' },
   ],
-  social: [
-    { name: 'LinkedIn', href: 'https://linkedin.com/in/', icon: Linkedin },
-    { name: 'GitHub', href: 'https://github.com/', icon: Github },
-    { name: 'Email', href: 'mailto:contact@dvs-web.fr', icon: Mail },
-  ],
 }
 
 export function Footer() {
@@ -39,24 +32,10 @@ export function Footer() {
               <Logo size="sm" />
               <span className="font-semibold text-white">DVS Web</span>
             </Link>
-            <p className="text-neutral-400 text-sm leading-relaxed mb-6">
+            <p className="text-neutral-400 text-sm leading-relaxed">
               Développeur web freelance basé près de Rennes.
               Création de sites et applications sur-mesure.
             </p>
-            <div className="flex gap-4">
-              {navigation.social.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-neutral-500 hover:text-accent transition-colors"
-                  aria-label={item.name}
-                >
-                  <item.icon size={20} />
-                </a>
-              ))}
-            </div>
           </div>
 
           {/* Navigation */}

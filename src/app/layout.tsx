@@ -100,10 +100,6 @@ const jsonLd = {
     opens: '09:00',
     closes: '18:00',
   },
-  sameAs: [
-    'https://www.linkedin.com/in/evan-davison',
-    'https://github.com/evan-davison',
-  ],
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Services de développement web',

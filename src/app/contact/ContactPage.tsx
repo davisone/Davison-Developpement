@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { ScrollReveal } from '@/components/animations/ScrollReveal'
 import { Button } from '@/components/ui/Button'
-import { Mail, MapPin, Linkedin, Github, Send, CheckCircle, Phone } from 'lucide-react'
+import { Mail, MapPin, Send, CheckCircle, Phone } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 const contactInfo = [
@@ -23,18 +23,6 @@ const contactInfo = [
     icon: MapPin,
     label: 'Localisation',
     value: 'Rennes et alentours, France',
-  },
-  {
-    icon: Linkedin,
-    label: 'LinkedIn',
-    value: 'DVS Web',
-    href: 'https://linkedin.com/in/',
-  },
-  {
-    icon: Github,
-    label: 'GitHub',
-    value: 'github.com/',
-    href: 'https://github.com/',
   },
 ]
 

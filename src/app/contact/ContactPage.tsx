@@ -32,7 +32,9 @@ export function ContactPage() {
     email: '',
     subject: '',
     message: '',
+    website: '', // Honeypot anti-spam
   })
+  const [formLoadedAt] = useState(() => Date.now())
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [error, setError] = useState('')
@@ -46,7 +48,10 @@ export function ContactPage() {
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formState),
+        body: JSON.stringify({
+          ...formState,
+          _loadedAt: formLoadedAt,
+        }),
       })
 
       if (!response.ok) {
@@ -54,7 +59,7 @@ export function ContactPage() {
       }
 
       setIsSubmitted(true)
-      setFormState({ name: '', email: '', subject: '', message: '' })
+      setFormState({ name: '', email: '', subject: '', message: '', website: '' })
     } catch {
       setError('Une erreur est survenue. Veuillez réessayer ou me contacter directement par email.')
     } finally {
@@ -203,6 +208,20 @@ export function ContactPage() {
                         rows={6}
                         className={cn(inputClasses, 'resize-none')}
                         placeholder="Décrivez votre projet, vos besoins, vos questions..."
+                      />
+                    </div>
+
+                    {/* Honeypot anti-spam - invisible pour les humains */}
+                    <div aria-hidden="true" style={{ position: 'absolute', left: '-9999px', opacity: 0, height: 0, overflow: 'hidden' }}>
+                      <label htmlFor="website">Website</label>
+                      <input
+                        type="text"
+                        id="website"
+                        name="website"
+                        value={formState.website}
+                        onChange={handleChange}
+                        tabIndex={-1}
+                        autoComplete="off"
                       />
                     </div>
 

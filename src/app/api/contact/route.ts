@@ -3,9 +3,53 @@ import { NextRequest, NextResponse } from 'next/server'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
+// Rate limiting en mémoire (réinitialisé au redémarrage du serveur)
+const rateLimit = new Map<string, { count: number; firstRequest: number }>()
+const RATE_LIMIT_MAX = 3
+const RATE_LIMIT_WINDOW = 60 * 60 * 1000 // 1 heure
+
+function isRateLimited(ip: string): boolean {
+  const now = Date.now()
+  const entry = rateLimit.get(ip)
+
+  if (!entry || now - entry.firstRequest > RATE_LIMIT_WINDOW) {
+    rateLimit.set(ip, { count: 1, firstRequest: now })
+    return false
+  }
+
+  entry.count++
+  return entry.count > RATE_LIMIT_MAX
+}
+
+// Durée minimum entre le chargement de la page et la soumission (en ms)
+const MIN_SUBMIT_TIME = 3000
+
 export async function POST(request: NextRequest) {
   try {
-    const { name, email, subject, message } = await request.json()
+    // Rate limiting par IP
+    const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim()
+      || request.headers.get('x-real-ip')
+      || 'unknown'
+
+    if (isRateLimited(ip)) {
+      return NextResponse.json(
+        { error: 'Trop de messages envoyés. Veuillez réessayer plus tard.' },
+        { status: 429 }
+      )
+    }
+
+    const { name, email, subject, message, website, _loadedAt } = await request.json()
+
+    // Anti-spam : honeypot (si rempli, c'est un bot)
+    if (website) {
+      // On retourne un faux succès pour ne pas alerter le bot
+      return NextResponse.json({ success: true, id: 'ok' })
+    }
+
+    // Anti-spam : vérification temporelle
+    if (_loadedAt && Date.now() - _loadedAt < MIN_SUBMIT_TIME) {
+      return NextResponse.json({ success: true, id: 'ok' })
+    }
 
     // Validation basique
     if (!name || !email || !subject || !message) {

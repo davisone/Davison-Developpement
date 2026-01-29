@@ -79,6 +79,21 @@
            after:bg-accent after:transition-all after:duration-300
            hover:after:w-full;
   }
+
+  .prose-blog {
+    @apply prose prose-invert max-w-none
+           prose-headings:text-white prose-headings:font-bold
+           prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4
+           prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3
+           prose-p:text-neutral-300 prose-p:leading-relaxed
+           prose-a:text-accent prose-a:no-underline hover:prose-a:text-accent-light
+           prose-strong:text-white
+           prose-ul:text-neutral-300 prose-ol:text-neutral-300
+           prose-li:marker:text-accent
+           prose-blockquote:border-accent prose-blockquote:text-neutral-400
+           prose-code:text-accent prose-code:bg-neutral-800 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded
+           prose-hr:border-neutral-700;
+  }
 }
 
 @layer utilities {

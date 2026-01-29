@@ -12,6 +12,7 @@ const navigation = {
     { name: 'Tarifs', href: '/tarifs' },
     { name: 'Réalisations', href: '/realisations' },
     { name: 'Contact', href: '/contact' },
+    { name: 'Blog', href: '/blog' },
   ],
   services: [
     { name: 'Création de sites', href: '/services#creation-site' },
